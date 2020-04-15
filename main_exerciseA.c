@@ -28,8 +28,8 @@ double Lbox=1000;//size of box
 double ktot;
 
 //Read the delta field
-sprintf(name_file,"deltaxfield.dat");
-//sprintf(name_file,"deltaxfieldaniso.dat");
+sprintf(name_file,"deltax_threshold.dat");
+//sprintf(name_file,"deltax_field.dat");
 N=countlines(name_file);
 Ncell=(long int)( round(pow(N*1.,1./3.)) );
 delta=(double *)calloc(N,sizeof(double));
@@ -79,7 +79,7 @@ ki=malloc(sizeof(double)*Ncell);
 
 kmin=2.*Pi/Lbox;
 kmax=kmin*Ncell/2.;
-Deltak=0.001;
+Deltak=0.01;
 Nbins=(long int)((kmax-kmin)/Deltak)+1;
 Pk=(double *)calloc(Nbins,sizeof(double));
 Pk2=(double *)calloc(Nbins,sizeof(double));
