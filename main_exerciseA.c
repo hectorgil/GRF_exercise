@@ -73,7 +73,7 @@ ki=malloc(sizeof(double)*Ncell);
                         }
                         else
                         {
-                                ki[i]=-(N-i)*1.0*(2.0*Pi/Lbox);
+                                ki[i]=-(Ncell-i)*1.0*(2.0*Pi/Lbox);
                         }
         }
 
